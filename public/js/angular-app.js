@@ -10,8 +10,8 @@ homeCenterApp.controller('TabsCtrl', function ($scope) {
         title: 'Chromecast',
         url: 'template/chromecast.html'
     }, {
-        title: 'Three',
-        url: 'three.tpl.html'
+        title: 'Watchever',
+        url: 'template/watchever.html'
     }];
 
     $scope.currentTab = 'template/overview.html';
@@ -46,6 +46,15 @@ homeCenterApp.controller('ChromecastCtrl', function ($scope, $http) {
         clearInterval(statusInterval);
     });
 })
+
+homeCenterApp.controller('WatcheverCtrl', function ($scope, $http) {
+    $scope.lastTracks = [];
+
+    $http.get('/api/chromecast/watchever.json').success(function(data) {
+        $scope.lastTracks   = data.lastTracks;
+    })
+
+});
 
 homeCenterApp.controller('OverviewCtrl', function ($scope, $http) {
     
