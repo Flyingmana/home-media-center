@@ -15,3 +15,4 @@ apt-get install libavahi-compat-libdnssd-dev libnss-mdns
 * mdns
 * connect
 * server-static
+* express

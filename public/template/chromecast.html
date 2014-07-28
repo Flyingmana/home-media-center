@@ -1,0 +1,40 @@
+<div ng-controller="ChromecastCtrl">
+    <div>
+        <dl>
+            <dt>Chromecast Status:</dt>
+            <dd>{{chromecast.statusText}}</dd>
+            <dt>Full name:</dt>
+            <dd>{{chromecast.service.fullname}}</dd>
+            <dt>Host:</dt>
+            <dd>{{chromecast.service.host}}</dd>
+            <dt>Name:</dt>
+            <dd>{{chromecast.service.name}}</dd>
+            <dt>Port:</dt>
+            <dd>{{chromecast.service.port}}</dd>
+            <dt>Adresses:</dt>
+            <dd>
+                <ul>
+                    <li ng-repeat="address in chromecast.service.addresses">{{address}}</li>
+                </ul>
+            </dd>
+        </dl>
+        <dl>
+            <dt>Volume Level</dt>
+            <dd>{{chromecast.status.volume.level}}</dd>
+            <dt>Volume Muted</dt>
+            <dd>{{chromecast.status.volume.muted}}</dd>
+        </dl>
+        <div ng-repeat="application in chromecast.status.applications">
+            <dl>
+                <dt>appID</dt>
+                <dd>{{application.appId}}</dd>
+                <dt>displayName</dt>
+                <dd>{{application.displayName}}</dd>
+                <dt>statusText</dt>
+                <dd>{{application.statusText}}</dd>
+                <dt>transportId</dt>
+                <dd>{{application.transportId}}</dd>
+            </dl>
+        </div>
+    </div>
+</div>

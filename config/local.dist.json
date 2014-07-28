@@ -1,0 +1,7 @@
+{
+    "mediaPath": "/home/user/public_media/videos",
+    "mediaServerPort": 8080,
+    "frontendServer":{
+        "port": 3000
+    }
+} 

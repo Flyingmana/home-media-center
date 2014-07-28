@@ -1,0 +1,31 @@
+
+#header{
+    min-height: 50px;
+    border: 2px dotted limegreen;
+    margin-bottom:20px;
+}
+
+#navigation{
+    float:left;
+    width:150px;
+    min-height:400px;
+    border: 2px dotted black;
+}
+
+#navigation li.active{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#main{
+    float:left;
+    margin-left:20px;
+    min-width: 400px;
+    min-height: 400px;
+    border: 2px dotted darkorange;
+}
+
+
+
+
+
